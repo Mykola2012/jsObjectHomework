@@ -1,0 +1,5 @@
+#Ignore .fyles
+.*
+
+#Don't ignore .gitignore
+!.gitignore
