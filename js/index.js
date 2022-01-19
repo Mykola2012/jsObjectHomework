@@ -59,7 +59,7 @@ function Book(autor, titleBook, datePublication, publisher) {
 const bookAge = {};
 
 bookAge.getBookAge = function () {
-  return Number(`${2022 - this.yearPublication} years`);
+  return 2022 - this.yearPublication;
 };
 
 Book.prototype = bookAge;
@@ -72,6 +72,6 @@ const firstBook = new Book(
 );
 
 console.log(firstBook);
-console.log(firstBook.isBookAge());
+console.log(firstBook.getBookAge());
 
 console.groupEnd();
