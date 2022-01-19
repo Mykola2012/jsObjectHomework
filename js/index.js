@@ -13,18 +13,18 @@ const student = {
   viewing() {
     console.log(this.contactDetails);
   },
-  genderChange() {
+  changeGender() {
     if (this.gender === "Male") {
-      return (this.gender = "Female");
+      this.gender = "Female";
     } else if (this.gender === "Female") {
-      return (this.gender = "Male");
+      this.gender = "Male";
     }
   },
 };
 
 console.log(student);
 student.viewing();
-student.genderChange();
+student.changeGender();
 
 console.groupEnd();
 
@@ -34,13 +34,13 @@ const universityInfo = {
   university: "ЗНУ",
   faculty: "Экономический факультет",
   department: "Кафедра экономической кибернетики",
-  newFaculty(newTitleFaculty) {
+  changeFaculty(newTitleFaculty) {
     this.faculty = newTitleFaculty;
   },
 };
 
 console.log(universityInfo);
-universityInfo.newFaculty("Математический факультет");
+universityInfo.changeFaculty("Математический факультет");
 
 console.groupEnd();
 
@@ -58,8 +58,8 @@ function Book(autor, titleBook, datePublication, publisher) {
 
 const bookAge = {};
 
-bookAge.isBookAge = function () {
-  return `${2022 - this.yearPublication} years`;
+bookAge.getBookAge = function () {
+  return Number(`${2022 - this.yearPublication} years`);
 };
 
 Book.prototype = bookAge;
